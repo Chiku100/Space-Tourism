@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Barlow:wght@500;700&family=Bellefair&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+
+html,
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  height: 100%;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+  width: 100%;
+  height: 100%;
+}
+.toggle{
+  display: none;
+}
+header {
+  /* margin:0 2rem; */
+  background: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 30vh;
+  padding:0 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+hr:not(.planets){
+  border: 0.1px solid rgb(85, 82, 82);
+  width: 40%;
+  right: 50%;
+  position: absolute;
+}
+a{
+  text-decoration: none;
+  color: white;
+}
+li {
+  cursor: pointer;
+  list-style: none;
+  margin: 0 1rem;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 400;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#hide{
+  display: none;
+}
+h2{
+  font-family: 'Barlow Condensed', sans-serif;
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+.Navbar{
+  padding: 1.5rem;
+  background-color: rgba(80, 79, 79, 0.205);
+}
+p{
+  font-family: 'Barlow', sans-serif;
+  letter-spacing: 2px;
+  line-height: 2rem;
+}
+span {
+  font-family: 'Bellefair', serif;
+  font-size: 8rem;
+}
+b{
+  font-size: 1.7rem;
+  font-family: 'Bellefair', serif;
+  text-transform: uppercase;
+  color: black;
+  font-weight: 900;
+}
+nav ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.Navbar a{
+  padding-bottom: 1.5rem;
+}
+.bgh{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: url("./assets/home/background-home-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -121;
+}
+.page_data h3{
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.bgd{
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  inset: 0;
+  background: url("./assets/destination/background-destination-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -121;
+}
+.home {
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ height: 70vh;
+}
+.home section{
+  margin-top: 2rem;
+  padding: 0 5rem;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+  align-items: center;
+}
+.circle{
+  cursor: pointer;
+  width: 15rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+}
+.destination{
+  height: 70vh;
+  padding: 4rem ;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.destination section{
+  width: 100%;
+  display: flex;
+  place-content: center;
+  flex-direction: column;
+  place-items: center;
+}
+.destination h2{
+  width: 100%;
+}
+.navdestination{
+  padding-right: 22%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  text-align: left;
+  margin-bottom: 2rem;
+}
+.parallel{
+  display: flex;
+}
+.parallel>div{
+  width: 50%;
+}
+.parallel div img{
+  width: 70%;
+}
+.parallel h3{
+  font-size: 5rem;
+  font-family: 'Bellefair', serif;
+  font-weight: 900;
+}
+.planets{
+  margin: 1rem 0;
+  border: 0.1px solid rgb(45, 43, 43);
+}
+.info{
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  margin-right: 2rem;
+}
+.masterinfo{
+  display: flex;
+}
+.info p:nth-of-type(2){
+  font-size: 2rem;
+}
+.rotate {
+  animation: rotation 40s infinite linear;
+}
+.bgc{
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  inset: 0;
+  background: url("./assets/crew/background-crew-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -121;
+}
+.members{
+  display: flex;
+  text-align: left;
+  transition: all linear 2s;
+}
+.members div{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  flex-direction: column;
+}
+.crew{
+  padding: 4rem;
+  height: 70vh;
+}
+.photu{
+  align-items: center; 
+  position: relative;
+  bottom: 2rem;
+}
+.crew_image{
+  /* width: 20rem; */
+  height: 30rem;
+  position: absolute;
+  
+}
+.btns{
+  margin-top: 2rem;
+}
+.members h3{
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: 'Bellefair', serif;
+  color: rgba(255, 255, 255, 0.37);
+}
+.members h4{
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: 'Bellefair', serif;
+  line-height: 4rem;
+}
+.bgt{
+  width: 100%;
+  height: 110%;
+  position: absolute;
+  inset: 0;
+  background: url("./assets/technology/background-technology-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: -121;
+}
+.btn{
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgb(14, 13, 13);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgb(96, 89, 89);
+  color: white;
+}
+.outline{
+  border-bottom: 4px solid white;
+}
+.btn:focus,
+.btn:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+  background-color: white;
+  color: black;
+}
+.tech_img{
+  height: 25rem;
+  position: absolute;
+}
+.technology{
+  padding: 4rem;
+  height: 70vh;
+}
+.technology section{
+  display: flex;
+
+}
+
+.tech_links{
+  width: 10%;
+}
+.tech_page{
+  width: 90%;
+}
+.page_data{
+  display: flex;
+}
+.page_data>div{
+  width: 50%;
+}
+.tech_img_parent{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+.tech_links{
+  /* height: 200%; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+
+
+
+
+
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+@media screen and (max-width:600px) {
+    .Navbar{
+      display: none;
+    }
+    .toggle{
+      display: block;
+    }
+    
+    .close{
+      display: flex;
+      justify-content: flex-end;
+    }
+    .home{
+      flex-direction: column;
+      justify-content: normal;
+      /* text-align: center; */
+    }
+    .home section{
+      padding: 0 1rem;
+      width: 100%;
+      text-align: center;
+    }
+    .home span{
+      font-size: 5rem;
+    }
+    .home h2{
+      font-size: 1rem;
+    }
+    .home p{
+      letter-spacing: 1px;
+      line-height: 1rem;
+    }
+    header{
+      padding:0 1rem ;
+      height: 10vh;
+    }
+    .bgh{
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: url("./assets/home/background-home-mobile.jpg");
+      background-repeat: no-repeat;
+      background-position: top;
+      z-index: -121;
+    }
+    hr{
+      display: none;
+    }
+    .mobilenav ul {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      height: 50vh;
+      justify-content: first baseline;
+    }
+    
+    .mobview{
+      height: 100vh;
+      padding: 1rem;
+      position: fixed;
+      top: 0;
+      right: 0;
+      transform: translateX(0);
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      border-radius:0 10px;
+      z-index: 100;
+      backdrop-filter: blur(1.5rem);
+      background: rgba(255, 255, 255, 0.046);
+      transition: transform 500ms ease-in-out;
+    }
+    li{
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      font-size: 1.2rem;
+    }
+   .animate{
+    transform: translateX(100%);
+
+   }
+   .destination{
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    align-items: center;
+    
+    text-align: center;
+  }
+  .parallel h3{
+    font-size: 4rem;
+  }
+  .destination section{
+    margin-top: 1rem;
+    padding: 0 1rem;
+    width: 100%;
+    text-align: center;
+  }
+  .destination span{
+    font-size: 5rem;
+  }
+  .destination h2{
+    font-size: 1rem;
+    margin: auto;
+  }
+  .destination p{
+    letter-spacing: 1px;
+    line-height: 1rem;
+  }
+  .parallel{
+    flex-direction: column;
+    justify-content: center;
+  }
+  .masterinfo{
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+  .masterinfo p{
+    line-height: 1.7rem;
+  }
+  .parallel div{
+    width: 100%;
+  }
+  .info p:nth-of-type(2){
+    font-size: 1.5rem;
+  }
+  .rotmoon,.rotmars,.roteuropa,.rottitan{
+    display: flex;
+    justify-content: center;
+  }
+  .navdestination{
+    padding-right: 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #hide{
+    display: flex;
+  }
+  .crew{
+    padding: 0;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .members{
+    flex-direction: column-reverse;
+    text-align: center;
+    padding:0 1rem ;
+    margin-top: 4rem;
+  }
+  .members div{
+    width: 100%;
+  }
+  .crew_image{
+    height: 20rem;
+    position:relative;
+  }
+  .members h3{
+    font-size: 1rem;
+  }
+  .members h4{
+    font-size: 2rem;
+  }
+  h2{
+    font-size: 1rem;
+  }
+  p{
+    line-height: 1rem;
+    letter-spacing: 1px;
+  }
+  .btns{
+    display: flex;
+    justify-content: center;
+  }
+  .technology{
+    padding: 0;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+  .technology section{
+    flex-direction: column-reverse;
+  }
+  .tech_page{
+    width: 100%;
+  }
+  .page_data{
+    flex-direction: column-reverse;
+    text-align: center;
+    
+  }
+  .page_data>div:not(.tech_img_parent){
+    padding: 0 1rem;
+  }
+  .page_data>div{
+    width: 100%;
+  }
+  .tech_img{
+    margin: 0.6rem 0;
+    height: 20rem;
+    width: 100%;
+    position: relative;
+  }
+  .tech_links{
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 1rem;
+  }
+  .page_data h3{
+    margin: 0.6rem 0;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+}
